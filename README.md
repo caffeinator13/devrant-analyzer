@@ -10,8 +10,8 @@ Running the project localy
   - $ gulp serve
 
 Links
-  - [devRant](www.devrant.io)
-  - [Live Demo of the Analyzer](dranalyzer.glimpsedash.com)
+  - [devRant](http://www.devrant.io)
+  - [Live Demo of the Analyzer](http://dranalyzer.glimpsedash.com)
 
 Some basic info:
   - The project is JS (AngularJs)
