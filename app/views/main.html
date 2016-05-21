@@ -1,0 +1,76 @@
+<div class="jumbotron">
+  <h2>Hey there fellow ranter :)!</h2>
+  <p>What is your username?</p>
+  <form class="form-inline" name="form" novalidate>
+    <div class="form-group">
+      <div>
+          <div class="input-group">
+            <input type="text" class="form-control" placeholder="Username" required ng-model="username"/>
+            <span class="input-group-btn">
+              <button type="submit" class="btn  btn-primary" ng-model="username" ng-click="handleSendClicked()" ng-disabled="form.$invalid || working">Send</button>
+            </span>
+          </div>
+        </div>
+    </div>
+</form>
+</div>
+
+<div class="row" ng-if="userData">
+  <div class="col-xs-12">
+  <div class="panel panel-default">
+    <div class="panel-heading">User Information</div>
+    <div class="panel-body">
+      <div class="row">
+        <div class="col-xs-5">Username</div>
+        <div class="col-xs-7">{{userData.username}}</div>
+      </div>
+      <div class="row">
+        <div class="col-xs-5">Skils</div>
+        <div class="col-xs-7">{{userData.skills}}</div>
+      </div>
+      <div class="row">
+        <div class="col-xs-5">Score</div>
+        <div class="col-xs-7">{{userData.score}}</div>
+      </div>
+      <div class="row">
+        <div class="col-xs-5">Location</div>
+        <div class="col-xs-7">{{userData.location}}</div>
+      </div>
+      <div class="row">
+        <div class="col-xs-5">About</div>
+        <div class="col-xs-7">{{userData.about}}</div>
+      </div>
+    </div>
+  </div>
+  </div>
+  <div class="col-xs-12">
+  <div class="panel panel-default">
+    <div class="panel-heading">Top performing posts <span class="label label-success pull-right">{{userData.content.content.rants.length}} total</span></div>
+    <div class="panel-body">
+      <div class="row" ng-repeat="rant in userData.content.content.rants | limitTo: 5" style="margin-bottom: 20px;">
+        <div class="col-xs-12">{{rant.text}}</div>
+        <div class="col-xs-12">
+          <span class="label label-success">Upvotes {{rant.num_upvotes}}</span>
+          <span class="label label-info">Comments {{rant.num_comments}}</span>
+          <span class="label label-warning">Downvotes {{rant.num_downvotes}}</span>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  </div>
+  <div class="col-xs-12">
+  <div class="panel panel-default">
+    <div class="panel-heading">Top performing comments <span class="label label-success pull-right">{{userData.content.content.comments.length}} total</span></div>
+    <div class="panel-body">
+      <div class="row" ng-repeat="comment in userData.content.content.comments | limitTo: 5" style="margin-bottom: 20px;">
+        <div class="col-xs-12">{{comment.body}}</div>
+        <div class="col-xs-12">
+          <span class="label label-success">Upvotes {{comment.num_upvotes}}</span>
+          <span class="label label-warning">Downvotes {{comment.num_downvotes}}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+</div>
