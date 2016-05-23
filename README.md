@@ -1,5 +1,8 @@
 # Welcome
 
+[![bitHound Code](https://www.bithound.io/github/trostik/devrant-analyzer/badges/code.svg)](https://www.bithound.io/github/trostik/devrant-analyzer)
+[![bitHound Overall Score](https://www.bithound.io/github/trostik/devrant-analyzer/badges/score.svg)](https://www.bithound.io/github/trostik/devrant-analyzer)
+
 devRant Analyzer was created in service to the devRant community. To give a basic preview and a structure of an AngularJs project that uses the APIs.
 
 Running the project localy
