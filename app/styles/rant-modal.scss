@@ -1,0 +1,19 @@
+.modal-body.rant-modal {
+  .row.item {
+    margin-left: 5px;
+    margin-bottom: 25px;
+
+    .comment {
+      margin-left:25px;
+    }
+  }
+
+  .rant-image {
+    max-width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .rant-comments-count {
+    cursor: default;
+  }
+}

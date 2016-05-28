@@ -1,7 +1,7 @@
 // bower:scss
 // endbower
-
 @import
+  "rant-modal",
   "lightbox";
 
 .browsehappy {
@@ -13,6 +13,10 @@
 
 body {
   padding: 0;
+}
+
+.action-icon {
+  cursor: pointer;
 }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
@@ -42,6 +46,15 @@ body {
   padding-top: 19px;
   color: #777;
   border-top: 1px solid #e5e5e5;
+}
+
+.badge.score {
+  margin-bottom:3px;
+  color: white;
+}
+
+.username {
+  color: lightblue;
 }
 
 .container-narrow > hr {

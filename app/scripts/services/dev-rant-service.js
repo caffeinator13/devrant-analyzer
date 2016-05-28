@@ -36,7 +36,7 @@ angular.module('devrantAnalyzerApp')
     DevRantService.getRantById = function(id){
       return $http({
         method: 'GET',
-        url: APP_URL + APP_PATHS.USERS_PATH.replace(':rant_id', id)
+        url: APP_URL + APP_PATHS.RANT_PATH.replace(':rant_id', id)
       });
     };
 

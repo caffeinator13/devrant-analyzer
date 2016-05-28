@@ -1,0 +1,12 @@
+<div class="col-xs-12" style="margin-bottom: 20px;">{{rant.text}}</div>
+<div class="col-xs-12 rant-image" lightbox="images" ng-if="rant.attached_image !== ''">
+    <a href="{{rant.attached_image.url}}" class="lightbox-trigger">
+        <img ng-src="{{rant.attached_image.url}}" class="rant-image"/>
+    </a>
+</div>
+<div class="col-xs-12 username" style="margin-bottom: 10px;">{{rant.user_username}} <span class="badge score">{{rant.score}}</span></div>
+<div class="col-xs-12">
+    <span class="label label-success">+ {{rant.num_upvotes}}</span>
+    <span class="label label-danger">- {{rant.num_downvotes}}</span>
+    <span class="label label-warning action-icon rant-comments-count" ng-click="showRantModal(rant.id)"><i class="fa fa-comment"/> {{rant.num_comments}}</span>
+</div>
