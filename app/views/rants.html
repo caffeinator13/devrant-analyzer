@@ -3,12 +3,7 @@
   <div class="panel-heading">Top performing comments <span class="label label-success pull-right">{{rants.length}} total</span></div>
   <div class="panel-body">
     <div class="row" ng-repeat="rant in rants" style="margin-bottom: 20px;">
-      <div class="col-xs-12" style="margin-bottom: 20px;">{{rant.text}}</div>
-      <div class="col-xs-12" style="margin-bottom: 10px;">{{rant.user_username}}</div>
-      <div class="col-xs-12">
-        <span class="label label-success">+ {{rant.num_upvotes}}</span>
-        <span class="label label-danger">- {{rant.num_downvotes}}</span>
-      </div>
+      <div ng-include="'views/rants/rant.html'" ></div>
     </div>
   </div>
 </div>
