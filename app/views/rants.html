@@ -4,6 +4,11 @@
   <div class="panel-body">
     <div class="row" ng-repeat="rant in rants" style="margin-bottom: 20px;">
       <div class="col-xs-12" style="margin-bottom: 20px;">{{rant.text}}</div>
+      <div class="col-xs-12 rant-image" lightbox="images" ng-if="rant.attached_image !== ''">
+        <a href="{{rant.attached_image.url}}" class="lightbox-trigger">
+          <img ng-src="{{rant.attached_image.url}}" />
+        </a>
+      </div>
       <div class="col-xs-12" style="margin-bottom: 10px;">{{rant.user_username}}</div>
       <div class="col-xs-12">
         <span class="label label-success">+ {{rant.num_upvotes}}</span>
