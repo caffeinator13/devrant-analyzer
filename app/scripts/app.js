@@ -16,7 +16,8 @@ angular
     'ngRoute',
     'ngSanitize',
     'ngTouch',
-    'toastr'
+    'toastr',
+    'angularModalService'
   ])
   .config(function ($routeProvider) {
     $routeProvider
